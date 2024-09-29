@@ -15,6 +15,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: .9em;
+            font-weight: bolder;
+            
         }
         div{
             border: 1px solid black;
@@ -47,32 +51,51 @@
            justify-content: space-around;
            text-align: center;
            padding-top: 10px;
+           color: white;
         }
         .item1-box1{
             height: 80px;
             width: 180px;
             background-color:#FFFFFF ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .item1-box2{
             height: 80px;
-            width: 60px;
+            width: 80px;
             background-color:#FFFFFF ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .item2-box1{
             height: 80px ;
             width: 65px;
             background-color: #080808;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         .item2-box2{
             height: 80px ;
             width: 65px;
             background-color: #080808;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         
         .item2-box3{
             height: 80px ;
             width: 65px;
             background-color: #080808;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
 
@@ -82,10 +105,10 @@
 <body>
     <div class="contianer">
         <div class="item1">
-            <div class="item1-box1"></div> <div class="item1-box2"></div>
+            <div class="item1-box1"><input type="date"></div> <div class="item1-box2">Calculate</div>
         </div>
         <div class="item2">
-            <div class="item2-box1"></div><div class="item2-box2"></div><div class="item2-box3"></div>
+            <div class="item2-box1"><p>24</p><p style="color: #616161;">years</p></div><div class="item2-box2"><p>8</p><p style="color: #616161;">Months</p></div><div class="item2-box3"><p>12</p><p style="color: #616161;">Days</p></div>
         </div>
     </div>
 </body>
