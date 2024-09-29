@@ -68,6 +68,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
         }
         .item2-box1{
             height: 80px ;
@@ -105,11 +106,40 @@
 <body>
     <div class="contianer">
         <div class="item1">
-            <div class="item1-box1"><input type="date"></div> <div class="item1-box2">Calculate</div>
+            <div class="item1-box1"><input type="date" id="myDate"></div> <div class="item1-box2" onclick="Calculate();" >Calculate</div>
         </div>
         <div class="item2">
-            <div class="item2-box1"><p>24</p><p style="color: #616161;">years</p></div><div class="item2-box2"><p>8</p><p style="color: #616161;">Months</p></div><div class="item2-box3"><p>12</p><p style="color: #616161;">Days</p></div>
+            <div class="item2-box1"><p id="year">24</p><p style="color: #616161;">years</p></div><div class="item2-box2"><p id="month">8</p><p style="color: #616161;">Months</p></div><div class="item2-box3"><p id="day">12</p><p style="color: #616161;">Days</p></div>
         </div>
     </div>
+    <script>
+        
+        
+        console.log(datevalue);
+        function Calculate() {
+            var dateInput = document.getElementById("myDate").value;
+            console.log(dateInput);
+            if (dateInput) {
+        // Split the date into parts (year, month, day)
+        var dateParts = dateInput.split("-");
+        var year = dateParts[0];  // Year
+        var month = dateParts[1]; // Month
+        var day = dateParts[2];   // Day
+        document.getElementById('year').innerHTML = year;
+        document.getElementById('month').innerHTML = month;
+        document.getElementById('day').innerHTML = day;
+
+        
+    } else {
+        alert("Date input can't be null");
+    }
+    
+
+        }
+     
+    </script>
 </body>
 </html>
+
+<!-- var datevalue = document.getElementsByClassName('item1-box1').value;
+console.log(datevalue); -->
