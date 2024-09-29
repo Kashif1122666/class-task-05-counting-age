@@ -125,9 +125,10 @@
         var year = dateParts[0];  // Year
         var month = dateParts[1]; // Month
         var day = dateParts[2];   // Day
-        document.getElementById('year').innerHTML = year;
-        document.getElementById('month').innerHTML = month;
-        document.getElementById('day').innerHTML = day;
+        var today = new Date();
+        document.getElementById('year').innerHTML =     today.getFullYear() - year;
+        document.getElementById('month').innerHTML = today.getMonth() - month;
+        document.getElementById('day').innerHTML = today.getMonth() - day;
 
         
     } else {
