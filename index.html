@@ -12,6 +12,7 @@
         }
         body{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -19,6 +20,11 @@
             font-size: .9em;
             font-weight: bolder;
             
+        }
+        #Title{
+           text-align: center;
+           margin-bottom: 70px;
+           border: none;
         }
         div{
             border: 1px solid black;
@@ -104,6 +110,7 @@
     
 </head>
 <body>
+    <div id="Title"><h1>Let's Count your age <br>Please Enter Your Date of Birth Below!</h1></div>
     <div class="contianer">
         <div class="item1">
             <div class="item1-box1"><input type="date" id="myDate"></div> <div class="item1-box2" onclick="Calculate();" >Calculate</div>
@@ -114,11 +121,8 @@
     </div>
     <script>
         
-        
-        console.log(datevalue);
         function Calculate() {
             var dateInput = document.getElementById("myDate").value;
-            console.log(dateInput);
             if (dateInput) {
         // Split the date into parts (year, month, day)
         var dateParts = dateInput.split("-");
